@@ -1,153 +1,353 @@
-# Finding the real signal · 提炼真信号
+# Signal Mining
 
-How to turn raw research (claims / published / rejected) into a small set of findings that actually distinguish this journal from its neighbors — and throw away everything that's just a field-wide norm.
-如何把原始调研（声称 / 实际发表 / 拒掉）提炼成少量**真正能把这本刊和邻刊区分开**的发现，并丢掉所有全领域通用规范。
-
-Read this during Step 4 (Build the journal profile).
+How to turn raw evidence (claims / published / rejected / full texts / guidelines) into a tight, accurate journal profile. Read this during Step 4.
 
 ---
 
-## 1. Two tests every candidate finding must pass · 每条候选发现要过的两关
+## 1. From candidate observation to real finding
 
-Something you noticed in the corpus is only a candidate. Promote it to a real finding only if it passes **both**:
-你在论文里注意到的规律只是候选。同时过这两关，才算真发现：
+Something you noticed in the corpus is only a candidate. Every candidate must pass both tests before entering the profile.
 
-### Test 1 — The rival-journal test · 改投测试
+### Test 1 — Rival-journal test
+
 > Would knowing this change which of two similar journals you'd submit to?
-> 知道这件事，会改变你"在两本相似期刊之间该投哪本"的决定吗？
 
-If this journal and its closest rival would both want the paper equally on this point, the point is a field-wide norm. Examples that **fail** (drop them): "uses IMRaD", "has a limitations paragraph", "cites recent work", "well-written English". Examples that **pass** (keep them): "requires a real classroom intervention, not just a lab study", "expects a named theoretical framework in its own section", "rewards replication over novelty".
+Run the test mentally: if both this journal and the rival journal would accept a paper on this point equally, the finding is a field-wide norm — discard it.
 
-本刊和它最近的对手刊在这一点上同样想要，那它就是全领域规范。**不通过**例（丢）："用 IMRaD""有局限段""引近作""英文流畅"。**通过**例（留）："要求真实课堂干预、不接受纯实验室研究""要求独立成节的命名理论框架""看重复现甚于新颖"。
+**Fail examples** (both journals want this → discard):
+- "Papers use IMRaD structure"
+- "Papers have a limitations paragraph"
+- "Papers cite recent literature"
+- "Papers are well-written"
+- "Papers state their contribution clearly"
 
-### Test 2 — The prediction test · 预测测试
-> Can you use this finding to predict the fate of a paper you haven't seen?
-> 用这条发现能预测一篇你没见过的稿子的命运吗？
+**Pass examples** (this journal specifically wants this, rival does not):
+- "Requires a real classroom intervention with students, not a lab simulation" (Computers & Education vs BJET)
+- "Expects a named theoretical framework as its own section, not folded into the literature review" (JLS vs AERA Open)
+- "Rewards replication and consolidation over novel methods" (Psychological Science vs JPSP)
+- "Desk-rejects systematic reviews without a registered protocol" (BMJ vs JAMA)
 
-If you can't say "a paper with property X would likely be rejected / welcomed here", the finding is decoration. "Quality matters" predicts nothing. "Purely conceptual papers with no data are rejected without review" predicts a lot.
-如果你说不出"具备 X 特征的稿子在这里大概会被拒/被欢迎"，那它只是装饰。"质量重要"什么都预测不了；"无数据的纯概念稿连送审都到不了"预测力很强。
+### Test 2 — Prediction test
 
-**Pass both → real finding. Pass one → minor tendency (note it, but don't put it in the verdict's hard checks). Pass neither → discard.**
-两关都过 → 真发现；过一关 → 次要倾向（记下，但不进裁决的硬性检查）；都不过 → 丢弃。
+> Can this finding predict the fate of a paper you haven't seen?
 
-> Rule of thumb: keep 3–7 sharp findings for the editor-screen stage. Three that discriminate beat ten that don't.
+If you cannot say "a paper with property X would likely be desk-rejected / welcomed here," the finding is not actionable — discard it.
 
----
+**Fail examples** (cannot predict):
+- "This journal values quality research"
+- "Papers should be methodologically rigorous"
+- "Papers address important questions"
 
-## 2. Types of claims-vs-reality gap · "声称 vs 实际"落差的四种类型
+**Pass examples** (predicts a specific outcome):
+- "A paper reporting only satisfaction/intention-to-use with no learning outcome measure will be desk-rejected here"
+- "A paper that reports a novel AI architecture without measuring educational impact will be routed to the companion journal"
+- "A study with N < 50 that does not justify the sample size will likely fail peer review"
 
-The gap between what a journal *claims* and what it *actually publishes* is the richest source of non-obvious findings. Classify each gap you find:
-期刊"声称的"与"实际刊登的"之间的落差，是非显而易见发现的最富矿藏。给每个落差归类：
+### Decision table
 
-| Gap type / 类型 | Pattern / 形态 | What it means for the author / 对作者意味着 |
-|---|---|---|
-| **Aspirational / 愿景型** | Claims it wants X (e.g. theory), publishes almost none | X-only papers risk rejection without review; frame X as support, not the main claim |
-| **Narrower than advertised / 收窄型** | Claims a broad scope, actually clusters in a sub-area | Real scope is narrower than the pitch; position inside the cluster |
-| **Drifting / 漂移型** | Recent issues diverge from the older self-description | A scope shift is underway; weight the last 1–2 years and flag the trend |
-| **Hidden bar / 门槛型** | Claims "welcomes all methods", but accepted papers share an unstated rigor floor | There's an unstated method bar; name it from the real papers |
+| Passes Test 1 | Passes Test 2 | Action |
+|:---:|:---:|--------|
+| ✓ | ✓ | **Real finding** — add to profile |
+| ✓ | ✗ | **Descriptive label** — note in profile text, don't use in verdict logic |
+| ✗ | ✓ | **Field-wide norm** — discard; it gives no advantage |
+| ✗ | ✗ | **Discard** |
 
-Every gap should surface either as an editor-screen red flag or as an exploitable hidden preference. Never hide a gap to make the journal look consistent.
-每个落差要么变成编辑初筛的红旗，要么变成可利用的隐藏偏好。绝不为了让期刊显得"言行一致"而藏起落差。
-
----
-
-## 3. The journal's writing style · 期刊的写作风格（量化，别凭感觉）
-
-From 5–10 recent representative papers (first-hand), measure rather than guess:
-从 5–10 篇近期代表作（一手）取样，量化而非凭感觉：
-
-| Dimension / 维度 | Measure / 怎么量 |
-|---|---|
-| Abstract / 摘要 | structured or not; median word count; the sequence of functions it covers |
-| Title / 标题 | average length; does it use a colon subtitle; does it name the method/setting |
-| Length / 篇幅 | body word-count range (min–median–max) |
-| Intro moves / 引言动作 | how it sets up the topic → states the gap → states the contribution |
-| Section order / 章节顺序 | the standard sequence; is the theory framework its own section; where do limitations go |
-| Figures/tables / 图表 | median count per paper; preferred types |
-| Citations / 引用 | density (per 1000 words); share of last-5-years work; rate of self-citing the journal |
-| Voice / 语气 | confident vs cautious; first person used or avoided; jargon density |
-
-Output a **recipe the author can follow** (a fill-in template + a real example), not a list of adjectives.
-产出**作者能照做的配方**（填空模板 + 真实范例），而不是一串形容词。
+> Aim for 3–7 Stage-1 findings that pass both tests. Three strong ones beat ten weak ones.
 
 ---
 
-## 4. Handling change and contradiction · 处理变化与矛盾
+## 2. Claims-vs-reality gap: how to extract and classify
 
-Journals evolve; contradictions are signal, not error.
-期刊会演化；矛盾是信号，不是错误。
+The gap between what a journal claims and what it publishes is the richest source of non-obvious findings.
 
-- **New editor / scope relaunch** → weight the most recent 1–2 years; note the turning point explicitly.
-- **Special issue vs regular issue** → a special issue's taste ≠ the journal's standing taste. Tag special-issue papers so they don't dominate the topic picture.
-- **Sibling journals from the same publisher** → they differ on purpose; that difference is exactly your rival-journal-test material.
+### Extraction process
 
-Never average a contradiction into a bland middle. Record both poles and when each applies.
-绝不把矛盾"和稀泥"成一个平庸的中间值。记录两极，以及各自适用的条件。
+1. List every claim from `claims.md` (stated preferences, scope descriptions, "we welcome X" language)
+2. For each claim, check `published.md`: does the corpus actually reflect it?
+3. Where they diverge, record the gap with approximate magnitude (e.g. "claims to welcome theory; empirical papers are ~95% of corpus in last 3 years")
+4. Classify the gap type:
 
----
+| Type | Pattern | What to tell the author |
+|------|---------|------------------------|
+| **Aspirational** | Claims to want X, publishes very little X | Frame X as support for the main empirical contribution, not as the contribution itself. X-only submissions face desk-reject risk. |
+| **Narrower than stated** | Broad scope claim, actual publications cluster tightly | The working scope is narrower than advertised. Name the cluster and advise positioning inside it. |
+| **Drifting** | Recent 1–2 years diverging from older issues | A transition is underway. Weight recent papers heavily; flag the direction. |
+| **Hidden bar** | "Welcomes all methods" but accepted papers share an unstated rigor floor | Name the floor concretely: "accepted papers consistently report [specific statistic / sample threshold / instrument validation]". |
 
-## 5. When evidence is thin · 证据不足时
+### Gap as a desk-reject signal
 
-| Situation / 情况 | What to do / 怎么办 |
-|---|---|
-| Fewer than ~5 readable full papers | Cap editor-screen findings at 2–3, label each "limited sample"; say so up front |
-| Titles/TOC only, no full text | Profile topics only; mark writing style as "not sampled" |
-| No reviewer/author guidelines found | Infer the rejection patterns from the real papers, lower the confidence tag |
-| Brand-new journal, no history | State plainly the decoder is low-confidence; lean on author-supplied PDFs |
+Every Aspirational or Hidden-bar gap becomes a Stage-1 red flag in the profile. State it as a testable condition:
 
-A thin-but-honest decoder that flags its gaps is more useful than a confident one that invents taste.
-一个证据薄但诚实标注缺口的解码器，比一个自信满满却在编造口味的有用得多。
+```
+❌ "The main contribution is a new AI model / algorithm / system, with learning impact as secondary"
+   → Stage 1 block: contribution type mismatch. Route to [companion journal].
 
----
+❌ "The study has no control group or comparison condition"
+   → Stage 1 / Stage 2 risk depending on whether guidelines state it or reviewers catch it.
+```
 
-## 6. Calibration logic (Step 5) · 校准逻辑
+### Gap as a hidden preference to exploit
 
-The decoder is only trustworthy if it discriminates. Two held-out checks:
-解码器只有能区分时才可信。两个留出检查：
+Every Narrower-than-stated gap is an opportunity. If the journal quietly prefers a sub-area it doesn't advertise, say so:
 
-- **Hit**: real in-journal papers (not the ones you trained on) must score **SUBMIT**. If not → the editor-screen findings are wrong.
-- **Redirect**: a rival-journal or off-topic paper must score **REDIRECT** with a correct reason. If it scores SUBMIT → the findings are too broad (they failed Test 1); tighten them.
-
-Hold out the calibration papers *before* you finalize the findings, so the test is honest. Use an independent checker (a subagent) when possible to avoid grading your own work.
-定稿之前就把校准论文留出来，测试才诚实。尽量用独立检查者（subagent），避免自评。
-
----
-
-## 6b. From open-access full texts → a writing framework · 从全文提炼写作框架
-
-Abstracts tell you the topic; only full text tells you how the journal *writes*. Find 2–3 genuinely open-access papers (OpenAlex `is_oa`, Unpaywall, Europe PMC, repository/preprint copies) and extract the **move structure** — the sequence of rhetorical moves per section, not the content:
-摘要只能看选题；只有全文能看出它**怎么写**。找 2–3 篇真·开放获取论文，提炼每节的**动作结构**（修辞动作的顺序，不是内容）：
-
-- **Introduction** — the funnel: what it opens on (the problem? the technology?), how it narrows, exactly where the gap sentence sits, and whether the research questions live here or later.
-- **Framework / lit review** — its own section, or folded in? one subsection per construct, each ending in a hypothesis?
-- **Methods** — the subsection order and the level of detail expected (e.g. one block per measure with reliability).
-- **Results** — organized by RQ or by hypothesis; how statistics are reported inline; table vs figure roles.
-- **Discussion** — its fixed moves (restate → interpret vs prior work → implications → limitations + future).
-
-Capture two real fork patterns honestly if the journal allows both (e.g. separate Conclusion vs merged). Turn the result into a **fill-in skeleton** the author can follow, anchored to ≥1 real paper. If no OA full text exists, say so and mark the framework "inferred from abstracts".
+```
+✅ Gap insight: Although the journal's Aims & Scope mention "all educational technologies,"
+   62% of papers in 2022–2024 involve generative AI or learning analytics.
+   → Framing a study within these areas improves fit even if the topic itself is unusual.
+```
 
 ---
 
-## 6c. From author guidelines → a submission kit · 从作者指南提炼投稿包
+## 3. Writing style: measure, don't describe
 
-The Guide for Authors is a checklist in disguise. Convert it into ready-to-fill templates, not prose:
-作者指南本质是一张藏起来的清单。把它变成可直接填的模板，而不是一段说明：
+Pull 5–10 recent representative papers (full text where available, abstracts only if not). Measure each dimension rather than forming an impression.
 
-- **Cover letter** → a skeleton with the exact beats this journal expects (significance, fit to scope, novelty, originality/no concurrent submission), and an explicit list of what must NOT go in it.
-- **Title page** → the exact required elements as a checklist; for anonymized review, also the list of what must be **stripped** from the manuscript (names, acknowledgements, funding, self-citations → third person).
-- **Mandatory declarations** → every required statement (competing interest, CRediT, data availability, ethics/consent, funding, generative-AI-use). Flag each as mandatory so an omission can't trigger a desk reject.
-- **Format gates** → word cap, abstract type + cap, highlights spec, reference style, section numbering. These are the cheapest desk rejects to avoid.
+### Abstract
 
-Always note: this kit is a **draft to verify against the live guide**, never a replacement for reading it.
+| Measure | How |
+|---------|-----|
+| Structured vs unstructured | Does it have labeled sections (Background, Methods, etc.)? |
+| Word count | Count 5 abstracts; record min / median / max |
+| Sentence functions | Label each sentence: problem / gap / aim / design / participants / method / finding / implication. Which are always present? Which are optional? |
+
+Record as a fill-in template, not a description:
+
+```
+Abstract template (≤[N] words, unstructured):
+S1 [Why this problem matters in [field/context]]
+S2 [The specific gap or unresolved question]
+S3 [What this study did: design + participants]
+S4 [Method in one clause]
+S5 [Key finding with direction and magnitude]
+S6 [What this means for [practitioners / researchers / the field]]
+```
+
+Anchor it to one real example:
+```
+Real example (doi: ...):
+"[paste 1–2 sentences that exemplify the pattern]"
+```
+
+### Title
+
+Measure across 10 recent titles:
+- Average word count
+- Use of colon subtitle (X of Y: a Z study) — what % use it?
+- Does the title name the construct / population / method / technology?
+- Is it a declarative finding or a descriptive topic phrase?
+
+Record as 2–3 named patterns with a real example of each:
+
+```
+Pattern A: [Construct] in [context]: [method signal]
+  → "Self-regulated learning in online courses: A quasi-experimental study"
+
+Pattern B: The effect of [technology] on [construct]: [method signal]
+  → "The effect of GPT scaffolding on academic writing: An experiment with undergraduate students"
+```
+
+### Introduction move structure
+
+Read 3 introductions in full and map the moves:
+
+```
+Move 1 — Establish importance: [what does it open on? the field? the problem? a statistic?]
+Move 2 — Narrow to the specific topic: [how many paragraphs? reference to technology or theory?]
+Move 3 — State the gap: [signal words used: "however", "little is known", "remains unclear"?]
+Move 4 — State the aim: [exact phrasing pattern: "Therefore, this study..." / "The purpose of this paper is to..."]
+Move 5 — Contribution/roadmap: [stated explicitly or implied? RQs here or in their own section?]
+```
+
+Note where the research questions appear: end of introduction, or in a dedicated "Research questions" section before Methods.
+
+### Methods
+
+Note the standard subsection order and the expected level of detail for each:
+
+```
+Typical structure: Participants → Design → [Intervention / Materials] → Measures → Analysis
+Detail expected for Measures: [one paragraph per instrument: name + source + N items + reliability (Cronbach's α or similar) + one example item]
+Detail expected for Analysis: [name the software + the specific procedure + any fit indices reported]
+```
+
+### Results
+
+Note whether results are organized by research question or by hypothesis, and how statistics are reported:
+
+```
+Organization: by [RQ / hypothesis / thematic cluster]
+Inline reporting pattern: t(df) = X.XX, p = .XXX, d = X.XX
+Table role: [descriptives + reliability / model parameters / group comparisons]
+Figure role: [path diagram with coefficients / bar charts with error bars / none typical]
+```
+
+### Discussion
+
+Map the fixed moves across 3 discussions:
+
+```
+Move 1 — Restate aim and key findings (1 paragraph)
+Move 2 — Interpret each finding against theory and prior work ("In line with...", "Contrary to...")
+Move 3 — Implications for [practitioners / policymakers / researchers] (required: what should someone DO?)
+Move 4 — Limitations (grouped by type: sample, design, measurement)
+Move 5 — Future directions (paired with each limitation or free-standing?)
+```
+
+Note if Conclusion is a separate section or merged into Discussion.
+
+### Length and format
+
+| Parameter | Record |
+|-----------|--------|
+| Body word count | min / median / max from 5 papers (exclude refs/appendices) |
+| Reference density | citations per 1000 words (approximate) |
+| Recency of citations | % of references from last 5 years (approximate) |
+| Self-citation to journal | whether papers typically cite the same journal |
+| Section numbering | numbered (1, 1.1) or unnumbered? |
+| Reference style | APA 7th / Vancouver / Chicago / journal-specific? |
 
 ---
 
-## 7. Self-check before shipping · 交付前自检
+## 4. From author guidelines to submission kit
 
-- [ ] Every editor-screen finding passes both the rival-journal test and the prediction test.
-- [ ] At least one claims-vs-reality gap is named and turned into either a red flag or a hidden preference.
-- [ ] The one-line "this journal vs the rival" difference wouldn't still be true if you swapped in the rival's name (i.e. it's genuinely specific).
-- [ ] Writing-style claims are anchored to ≥1 real example each, not generic advice.
-- [ ] Calibration: in-journal papers → SUBMIT, rival paper → REDIRECT.
-- [ ] Limits stated: sample size, research date, "fit raises the odds ≠ guarantees acceptance".
-- [ ] Strip the journal's name — can you still tell which journal/tier this is? If not, it's too generic.
+The Guide for Authors is a checklist. Convert it into ready-to-fill templates.
+
+### Cover letter
+
+Find whether the journal expects a cover letter (mandatory, recommended, or not mentioned). Then record:
+
+**What to include** — list only what this journal specifically asks for or Elsevier/Springer/Wiley guidance specifies:
+```
+[1] Study aim + main finding (2–3 sentences, no jargon)
+[2] Why this fits [journal name]'s scope (one sentence, using the journal's own scope language)
+[3] What is novel and why it matters beyond this study
+[4] Originality statement: not published, not under consideration elsewhere
+[5] [Optional] If invited: note the special issue or editor invitation
+```
+
+**What NOT to include** (common mistakes that some journals explicitly prohibit):
+```
+- Funding sources or declarations (go in the manuscript or the submission system)
+- Suggested or excluded reviewers (go in the submission system)
+- Author biographical notes
+- Detailed descriptions of methods
+```
+
+Record the cover-letter format as a fillable skeleton, not prose instructions.
+
+### Title page (for double-blind journals)
+
+Record two lists:
+
+**Elements required on the title page (separate file):**
+```
+☐ Full article title
+☐ All author names (exact order matching the submission system)
+☐ Each author's affiliation (department, institution, city, country)
+☐ Corresponding author: full postal address + email
+☐ Present address (if different from work address — footnote)
+☐ Acknowledgements (title page ONLY — not in the manuscript)
+☐ [Add any journal-specific fields found in the Guide for Authors]
+```
+
+**Elements to strip from the anonymized manuscript:**
+```
+☐ Author names and affiliations (everywhere in the body)
+☐ Acknowledgements (move to title page)
+☐ Funding references
+☐ Self-citations: replace "we have shown [Author, 2022]" with "[Anonymous, 2022]"
+☐ Self-citations in reference list: "[Anonymous, 2022] Details omitted for review"
+☐ Institutional identifiers in figures or supplementary material
+☐ Document metadata (clear author field in file properties)
+```
+
+### Mandatory declarations
+
+For each declaration, note: mandatory or conditional (only if applicable), where it goes in the manuscript, and the standard template wording:
+
+| Declaration | Mandatory? | Where | Template |
+|-------------|-----------|-------|----------|
+| Competing interest | Always | Separate file / end of MS | "The authors declare no competing interests." or list each |
+| CRediT author statement | Always | Separate file / end of MS | List each author's roles from the 14 CRediT roles |
+| Data availability | Always | End of MS | State repository + DOI, or reason data cannot be shared |
+| Ethics / informed consent | If human subjects | End of MS | State IRB name + approval number |
+| Generative AI use | If AI used in writing | Before references | "During preparation, [author] used [tool] to [purpose]. The author reviewed and takes full responsibility for the content." |
+| Funding | Always | End of MS | "This work was supported by [Funder] grant [number]." or "No specific funding was received." |
+
+### Format gates (cheapest desk-rejects to avoid)
+
+Record as a checklist:
+
+```
+☐ Word limit: ≤[N] words (excluding [references / appendices / highlights])
+☐ Abstract: [structured / unstructured], ≤[N] words
+☐ Highlights: [3–5] bullets, ≤[N] characters each (including spaces)
+☐ Reference style: [APA 7th / Vancouver / etc.]
+☐ File format: [.docx single-column / .tex with Elsevier template / no PDF source]
+☐ Section numbering: [required: 1, 1.1, 1.1.1 / not required]
+☐ Double-blind: [yes / no] — if yes, separate title page required
+```
+
+---
+
+## 5. Handling contradictions and change
+
+Journals evolve. Treat contradictions as signal, not error.
+
+**New editor or scope relaunch**: note the transition year; weight recent papers (last 1–2 years) more heavily; state the direction of change explicitly.
+
+**Special issues vs regular issues**: a special issue's topic mix reflects guest editors' interests, not the standing editorial preference. Tag special-issue papers separately and do not let them dominate the topic analysis.
+
+**Contradictions within the corpus**: record both patterns and the conditions under which each appears. Do not average them into a single description.
+
+Example:
+```
+Fork: Discussion section
+- Pattern A (Papers A, C, E): Discussion merged with Conclusion (no separate section)
+- Pattern B (Papers B, D): Separate Conclusion restates RQ answers; Discussion is interpretation only
+Both are acceptable. Authors can choose; Pattern A is slightly more common (3/5 sampled).
+```
+
+---
+
+## 6. Calibration: testing before shipping
+
+Hold out calibration papers *before* finalizing findings (so the test is honest).
+
+**Hit test**: take 2 papers the journal published that you did NOT use to build the profile. Run them through the Stage-1 logic. Both must score SUBMIT. If either fails, the Stage-1 signals are wrong — revise and retest.
+
+**Redirect test**: take 1 paper from the rival journal (or a clearly off-topic paper). Run it through Stage-1. Must score REDIRECT with a specific, correct reason. If it scores SUBMIT, the signals are too broad — tighten them.
+
+Use a subagent for calibration where possible. The same model that built the profile will tend to rationalize its own decisions; an independent checker catches this.
+
+---
+
+## 7. Pre-shipping checklist
+
+Before writing the child skill:
+
+**Signal quality**
+- [ ] Every Stage-1 finding passes both the rival-journal test and the prediction test
+- [ ] At least one claims-vs-reality gap is named, classified, and turned into either a red flag or an exploitable preference
+- [ ] The "this journal vs rival" one-liner would not apply equally if you swapped in the rival's name
+
+**Writing framework**
+- [ ] The abstract template is a fill-in skeleton with labeled sentence functions, not a description
+- [ ] The abstract template is anchored to at least one real example (with a DOI or source)
+- [ ] Title patterns are 2–3 specific patterns with real examples, not "clear and informative"
+- [ ] Section structure records the standard sequence AND notes any fork patterns
+
+**Submission kit**
+- [ ] Cover letter skeleton has labeled beats + an explicit list of what NOT to include
+- [ ] Title page is a checklist (if double-blind: includes the anonymization strip-list)
+- [ ] Every mandatory declaration is listed with its placement and template wording
+
+**Calibration**
+- [ ] Hit test passed: 2 held-out in-journal papers → SUBMIT
+- [ ] Redirect test passed: rival-journal or off-topic paper → REDIRECT
+
+**Honesty**
+- [ ] Sample size and research date stated
+- [ ] Any inferred or low-confidence items labeled [LOW] or [INFERRED]
+- [ ] "Fit improves odds, not a guarantee" in the limits section
+- [ ] "Verify against the live Guide for Authors before submitting" in the submission kit
